@@ -19,7 +19,6 @@ class PrivacyContractTests(unittest.TestCase):
             "njm" + "labios",
             "2x2" + " Picture",
         )
-
         violations: list[str] = []
         for path in ROOT.rglob("*"):
             if not path.is_file() or path.suffix.lower() not in PUBLIC_SUFFIXES:
@@ -33,7 +32,6 @@ class PrivacyContractTests(unittest.TestCase):
             for value in forbidden:
                 if value.casefold() in lowered:
                     violations.append(f"{path.relative_to(ROOT)} contains a source identity fragment")
-
         self.assertEqual([], violations)
 
     def test_tracked_text_contains_no_github_access_token(self) -> None:
@@ -50,7 +48,6 @@ class PrivacyContractTests(unittest.TestCase):
             text = path.read_text(encoding="utf-8")
             if any(pattern.search(text) for pattern in patterns):
                 violations.append(str(path.relative_to(ROOT)))
-
         self.assertEqual([], violations)
 
 
