@@ -21,7 +21,7 @@ class RenderTests(unittest.TestCase):
             generated_at="2026-08-03T04:17:00Z",
             account_created_at="2018-03-01T00:00:00Z",
             commit_contributions=1234,
-            restricted_contributions=0,
+            restricted_contributions=28_047,
             followers=42,
             coverage=coverage,
             inventory=InventoryStats(
@@ -109,6 +109,10 @@ class RenderTests(unittest.TestCase):
         self.assertNotIn("Email", svg)
         self.assertNotIn("LinkedIn", svg)
         self.assertNotIn("Discord", svg)
+        self.assertEqual(
+            by_id["commit_data"],
+            "1,234 commits / 28,047 private contributions",
+        )
 
     def test_dark_theme_is_red_and_black_without_purple_palette(self):
         svg = render_svg(self.make_stats(), "dark").casefold()
