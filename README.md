@@ -61,16 +61,6 @@ context → requirements → architecture → implementation → testing
 - **Research OS** — source validation, methodology control, citation integrity, gap analysis, manuscript production, and defense readiness.
 - **Company OS** — coordinated execution across engineering, HR, finance, marketing, sales, cybersecurity, legal/risk, and operations.
 
-## Operating Principles
-
-```text
-Plan before execution.
-Boundaries before complexity.
-Evidence before certainty.
-Security before exposure.
-Verification before completion.
-```
-
 ---
 
 <sub>Building enterprise software, AI systems, and agentic operating models with controlled execution.</sub>
