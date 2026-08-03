@@ -145,7 +145,10 @@ def render_svg(stats: ProfileStats, theme: str) -> str:
     )
     size_value = "—" if inventory_pending else _format_size_kib(inventory.size_kib)
     commit_value = (
-        f"{stats.commit_contributions:,} commit contributions" if signals_complete else "—"
+        f"{stats.commit_contributions:,} commits / "
+        f"{stats.restricted_contributions:,} private contributions"
+        if signals_complete
+        else "—"
     )
     signal_value = (
         f"{inventory.stars_owned:,} stars / {stats.followers:,} followers"
