@@ -11,9 +11,7 @@ on:
       - "profile_generator/**"
       - "tests/**"
       - ".github/workflows/profile-stats.yml"
-      - "docs/profile-generator.md"
       - "README.md"
-      - "SECURITY.md"
 
 permissions:
   contents: write
@@ -51,9 +49,9 @@ jobs:
       - name: Compile Python sources
         run: python -m compileall -q profile_generator tests
 
-      - name: Preserve bootstrap assets without telemetry credentials
+      - name: Preserve current assets without telemetry credentials
         if: env.TELEMETRY_CONFIGURED != 'true'
-        run: echo "No primary telemetry credential is installed; preserving current generated assets."
+        run: echo "Telemetry credentials are not configured; current profile assets remain unchanged."
 
       - name: Generate authenticated aggregate telemetry
         if: env.TELEMETRY_CONFIGURED == 'true'
