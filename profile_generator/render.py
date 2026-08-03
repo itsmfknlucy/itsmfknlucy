@@ -38,7 +38,7 @@ ASCII_PORTRAIT: Final[tuple[str, ...]] = (
     "              ,;GB&##S9B99B&B@S.",
     "             :riASB&BS#9##@@@h",
     "          ,;rsrirXh#&@@@@@@92;,",
-    "      ,;rsXssrr;iriXhS99B9HArXXXr:,","
+    "      ,;rsXssrr;iriXhS99B9HArXXXr:,",
     "  .:isAAAXssssrr;iriirAh3AssrssXXXXsi,.",
     ";sXAAAAXXXXsssssr;rrssXXXXXsisssssXXXXXsi:",
     ":XAXXXXXXXsXXssssrirrhB&BAirissssssXXXXXXX:",
