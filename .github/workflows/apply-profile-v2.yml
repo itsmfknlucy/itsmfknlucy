@@ -3,7 +3,7 @@ name: Apply profile ID v2
 on:
   push:
     branches:
-      - fix/profile-id-readme-v2
+      - production
 
 permissions:
   contents: write
@@ -19,9 +19,10 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - name: Check out branch with history
+      - name: Check out production with history
         uses: actions/checkout@v6
         with:
+          ref: production
           fetch-depth: 0
 
       - name: Apply verified profile update
@@ -47,4 +48,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "feat: finalize profile ID and repository statistics"
-          git push origin HEAD:fix/profile-id-readme-v2
+          git push origin HEAD:production
