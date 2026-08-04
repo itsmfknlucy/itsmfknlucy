@@ -8,7 +8,7 @@
 <h3 align="center">Lucifer Rodstark, Ph.D.</h3>
 
 <p align="center">
-  Lucy · Enterprise Software Architect · Lead Full Stack .NET Engineer · Cloud & AI Solutions Engineer
+  Enterprise Software Architect · Lead Full Stack .NET Engineer · Cloud & AI Solutions Engineer
 </p>
 
 <p align="center">
